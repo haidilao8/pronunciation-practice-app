@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pronunciation Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pronunciation Practice</h1>
+        <p>Enter a sentence and then click "Start Recording" to practice.</p>
+
+        <textarea id="sentence" placeholder="Enter your sentence here..."></textarea>
+
+        <div class="buttons">
+            <button id="start" disabled>
+                <img src="microphone-icon.png" alt="Microphone Icon" class="icon">
+                Start Recording
+            </button>
+            <button id="stop" class="hidden">
+                Stop Recording
+            </button>
+            <button id="playback" disabled>
+                <img src="speaker-icon.png" alt="Speaker Icon" class="icon">
+                Playback
+            </button>
+            <button id="hear-correct" disabled>
+                <img src="ear-icon.png" alt="Ear Icon" class="icon">
+                Hear Correct Pronunciation
+            </button>
+        </div>
+
+        <div id="feedback" class="feedback">
+            <!-- Feedback on pronunciation will appear here -->
+        </div>
+
+        <div class="progress-container">
+            <label for="progressBar">Playback Progress:</label>
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+
+        <p id="noise-warning" class="hidden">Warning: High background noise detected! Please try again in a quieter environment.</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
